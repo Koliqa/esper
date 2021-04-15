@@ -4,9 +4,9 @@ import os
 
 app = flask.Flask(__name__)
 
-@app.route('/yo_nigga')
+@app.route('/')
 def mofaker():
-    return 'GO FUCK YOURSELF!'
+    return flask.render_template('index.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
